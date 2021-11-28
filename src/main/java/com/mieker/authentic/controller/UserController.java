@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mieker.authentic.model.User;
+import com.mieker.authentic.model.AppUser;
 import com.mieker.authentic.service.UserService;
 
 @RestController
@@ -27,12 +27,12 @@ public class UserController {
     }
     
     @PostMapping("/user")
-    public User createUser(@RequestBody User user) {
+    public AppUser createUser(@RequestBody AppUser user) {
         return userService.createUser(user);
     }
     
     @GetMapping("/user")
-    public List<User> getAllUsers() {
+    public List<AppUser> getAllUsers() {
         return userService.getAllUsers();
     }
 }

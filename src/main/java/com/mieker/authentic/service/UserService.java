@@ -2,10 +2,11 @@ package com.mieker.authentic.service;
 
 import java.util.List;
 
-import com.mieker.authentic.model.User;
+import com.mieker.authentic.model.AppUser;
 
 public interface UserService {
 
-    User createUser(User user);
-    List<User> getAllUsers();
+    AppUser createUser(AppUser user);
+    List<AppUser> getAllUsers();
+    AppUser findUserByLogin(String login);
 }

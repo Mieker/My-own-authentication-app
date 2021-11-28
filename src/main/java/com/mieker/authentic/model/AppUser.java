@@ -3,14 +3,18 @@ package com.mieker.authentic.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
-public class User {
+public class AppUser {
 
     private String userName;
-    
+
     @JsonProperty(access = Access.WRITE_ONLY)
     private String userPassword;
 
-    public User(String userName, String userPassword) {
+    public AppUser() {
+
+    }
+
+    public AppUser(String userName, String userPassword) {
         super();
         this.userName = userName;
         this.userPassword = userPassword;
