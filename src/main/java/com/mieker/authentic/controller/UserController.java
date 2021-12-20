@@ -35,4 +35,9 @@ public class UserController {
     public List<AppUser> getAllUsers() {
         return userService.getAllUsers();
     }
+    
+    @GetMapping("/admin")
+    public String adminsSecret() {
+        return "tajna wiadomosc dla admina";
+    }
 }
